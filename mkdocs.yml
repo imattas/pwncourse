@@ -74,7 +74,7 @@ nav:
       - UAF: course/labs/07-heap/uaf/README.md
       - Menu UAF: course/labs/07-heap/menu-uaf/README.md
       - Heap leak chain: course/labs/07-heap/heap-leak-chain/README.md
-  - Capstone:
+  - Capstones:
       - Chain engineering: course/modules/10-chain-engineering/README.md
       - Capstone guide: course/modules/10-capstone/README.md
       - Rubric: course/capstones/RUBRIC.md

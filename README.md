@@ -15,6 +15,16 @@ Then open [`COURSE.md`](COURSE.md), begin with `modules/00-foundations`, and wor
 
 The complete inventory is in [`LAB-INDEX.md`](LAB-INDEX.md).
 
+## Website
+
+The course is published with MkDocs Material for GitHub Pages. The workflow in `.github/workflows/pages.yml` builds the documentation, exposes the lessons and writeups, and publishes the raw labs under `downloads/`.
+
+For a local preview after installing `mkdocs/requirements.txt`:
+
+```bash
+mkdocs serve
+```
+
 Remote CTF support is documented in [`REMOTE-TARGETS.md`](REMOTE-TARGETS.md). Local mode is always the default.
 
 ## Scope
