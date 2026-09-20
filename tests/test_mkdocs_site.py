@@ -11,6 +11,12 @@ def test_mkdocs_site_contract_exists():
 
 def test_mkdocs_config_exposes_course_sections():
     config = (ROOT / "mkdocs.yml").read_text(encoding="utf-8")
-    for label in ("Foundations", "Stack Control", "Heap", "Capstones"):
+    for label in ("Course chapters", "Labs and downloads", "References"):
         assert label in config
 
+
+def test_course_chapters_are_substantive():
+    chapters = list((ROOT / "chapters").glob("*.md"))
+    assert len(chapters) == 7
+    for chapter in chapters:
+        assert len(chapter.read_text(encoding="utf-8").splitlines()) >= 50, chapter
