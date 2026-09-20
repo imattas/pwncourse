@@ -1,0 +1,9 @@
+dist/
+mkdocs/docs/course/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+core
+labs/**/challenge
+labs/**/*.o

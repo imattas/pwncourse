@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PwnCourse — zero to master</title>
+  <meta name="description" content="A local-first binary exploitation course for WSL, from ELF fundamentals to exploit-chain engineering.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="brand-mark">P</span><span>PwnCourse</span></a>
+    <nav><a href="#path">Course path</a><a href="#labs">Labs</a><a href="#setup">Setup</a><a class="nav-button" href="course.zip">Download course</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">LOCAL-FIRST / WSL2 / X86-64</p>
+        <h1>Learn to build the chain.<br><em>Not just copy the payload.</em></h1>
+        <p class="lede">A hands-on binary exploitation course that starts with memory and ends with custom exploit chains: overflows, ret2win, ROP, leaks, format strings, heap lifetime bugs, and sandbox constraints.</p>
+        <div class="hero-actions"><a class="button primary" href="#path">Start the path <span>→</span></a><a class="button ghost" href="course/SETUP-WSL.md">Read setup guide</a></div>
+        <div class="hero-meta"><span><b>18</b> lab binaries</span><span><b>11</b> stages</span><span><b>100%</b> local by default</span></div>
+      </div>
+      <div class="terminal-card" aria-label="Example exploit chain">
+        <div class="terminal-head"><span></span><span></span><span></span><small>chain-notes.md</small></div>
+        <pre><code><i>01</i>  primitive   = stack overflow
+<i>02</i>  evidence    = offset 72
+<i>03</i>  control     = pop rdi ; ret
+<i>04</i>  argument    = 0x42424242
+<i>05</i>  destination = target()
+<i>06</i>  result      = <strong>flag{rop-call}</strong>
+
+<span class="muted">// prove every edge in the chain</span></code></pre>
+      </div>
+    </section>
+
+    <section class="principles">
+      <div><span class="number">01</span><h3>Observe first</h3><p>ELF, ABI, memory maps, and GDB evidence before exploit code.</p></div>
+      <div><span class="number">02</span><h3>Compose primitives</h3><p>Turn a leak, write, or control point into a complete chain.</p></div>
+      <div><span class="number">03</span><h3>Make it reliable</h3><p>Assertions, synchronization, repeatable local runs, and honest writeups.</p></div>
+    </section>
+
+    <section class="section" id="path">
+      <div class="section-heading"><div><p class="eyebrow">THE CURRICULUM</p><h2>From first crash to custom chain</h2></div><a href="course/COURSE.md">View course map ↗</a></div>
+      <div id="stage-grid" class="stage-grid"></div>
+    </section>
+
+    <section class="section labs-section" id="labs">
+      <div class="section-heading"><div><p class="eyebrow">THE LAB BENCH</p><h2>Pick a primitive. Prove it.</h2></div><a href="course/LAB-INDEX.md">Full lab index ↗</a></div>
+      <div class="lab-toolbar"><label class="search"><span>⌕</span><input id="lab-search" type="search" placeholder="Search labs, primitives, or stages" aria-label="Search labs"></label><div id="filters" class="filters"></div></div>
+      <div id="lab-grid" class="lab-grid"></div>
+    </section>
+
+    <section class="setup-band" id="setup"><div><p class="eyebrow">READY WHEN YOU ARE</p><h2>Everything runs in your WSL.</h2><p>Download the source, build the binaries, and follow the writeup only after you have a crash transcript of your own.</p></div><div class="setup-actions"><a class="button primary" href="course/SETUP-WSL.md">Set up WSL</a><a class="button ghost light" href="course/REMOTE-TARGETS.md">Local remote mode</a></div></section>
+  </main>
+
+  <footer><span>© PwnCourse</span><span>Authorized local labs only · <a href="https://github.com">GitHub Pages ready</a></span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
