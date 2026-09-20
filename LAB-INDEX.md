@@ -23,5 +23,23 @@ Every success marker uses the canonical form `flag{...}`. Build from WSL with `m
 | 07 | heap-leak-chain | UAF to callback control | runnable |
 | 08 | seccomp-rop | syscall-constraint planning | runnable fixture |
 
-“Learner exercise” means the repository intentionally leaves the final payload derivation to the student while still providing the vulnerable binary, objective, and complete writeup guidance.
+## Twelve lab tracks
 
+The course is organized into twelve lab tracks, each with a tutorial objective, a challenge ladder, required evidence, and an extension. The individual binaries under `labs/` are the downloadable fixtures used by these tracks.
+
+| Lab | Track | Core work |
+|---:|---|---|
+| 01 | Warmup and ELF | Artifact inspection, sections, symbols, ABI |
+| 02 | GDB and x86-64 | Crash evidence, cyclic offsets, stack frames |
+| 03 | First stack overflow | ret2win and argument-aware control |
+| 04 | Exploits with pwntools | Automation, synchronization, assertions |
+| 05 | Stack protections | NX, ASLR, PIE, canaries, RELRO |
+| 06 | Format strings | Positional reads and `%hn` writes |
+| 07 | ROP | Gadgets, alignment, pivots, staged input |
+| 08 | Leaks and ret2libc | Base arithmetic and second-stage chains |
+| 09 | Remote services | Local TCP service and remote-style I/O |
+| 10 | Heap fundamentals | Chunks, reuse, UAF, ownership |
+| 11 | Advanced heap | Menu UAF and callback-control chain |
+| 12 | Sandbox and capstone | Syscall constraints and custom chains |
+
+“Learner exercise” means the repository intentionally leaves the final payload derivation to the student while still providing the vulnerable binary, objective, and complete writeup guidance.

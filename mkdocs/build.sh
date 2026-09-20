@@ -9,6 +9,8 @@ rm -rf "$docs_dir" "$dist_dir"
 mkdir -p "$docs_dir"
 cp "$root_dir/COURSE.md" "$root_dir/LAB-INDEX.md" "$root_dir/SETUP-WSL.md" "$root_dir/REMOTE-TARGETS.md" "$docs_dir/"
 cp -r "$root_dir/chapters" "$root_dir/reference" "$docs_dir/"
+mkdir -p "$docs_dir/labs/tracks"
+cp "$root_dir/labs/tracks"/*.md "$docs_dir/labs/tracks/"
 if command -v py.exe >/dev/null 2>&1 && command -v cygpath >/dev/null 2>&1 && py.exe -c 'import mkdocs' >/dev/null 2>&1; then
   python_cmd=(py.exe)
   config_path="$(cygpath -w "$root_dir/mkdocs.yml")"

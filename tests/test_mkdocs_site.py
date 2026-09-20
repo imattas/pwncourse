@@ -20,3 +20,10 @@ def test_course_chapters_are_substantive():
     assert len(chapters) == 7
     for chapter in chapters:
         assert len(chapter.read_text(encoding="utf-8").splitlines()) >= 50, chapter
+
+
+def test_twelve_lab_tracks_are_substantive():
+    tracks = list((ROOT / "labs" / "tracks").glob("*.md"))
+    assert len(tracks) == 12
+    for track in tracks:
+        assert len(track.read_text(encoding="utf-8").splitlines()) >= 12, track

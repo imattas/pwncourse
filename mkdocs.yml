@@ -5,7 +5,7 @@ repo_name: pwncourse
 docs_dir: mkdocs/docs
 site_dir: dist
 theme:
-  name: mkdocs
+  name: readthedocs
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -29,6 +29,19 @@ nav:
       - 6. Heap exploitation: course/chapters/06-heap-exploitation.md
       - 7. Advanced chains and capstones: course/chapters/07-advanced-chains.md
   - Labs and downloads: course/LAB-INDEX.md
+  - Lab tracks:
+      - 1. Warmup and ELF: course/labs/tracks/01-warmup-and-elf.md
+      - 2. GDB and x86-64: course/labs/tracks/02-gdb-and-x86.md
+      - 3. First stack overflow: course/labs/tracks/03-first-stack-overflow.md
+      - 4. Exploits with pwntools: course/labs/tracks/04-pwntools.md
+      - 5. Stack protections: course/labs/tracks/05-stack-protections.md
+      - 6. Format strings: course/labs/tracks/06-format-strings.md
+      - 7. ROP: course/labs/tracks/07-rop.md
+      - 8. Leaks and ret2libc: course/labs/tracks/08-ret2libc.md
+      - 9. Remote services: course/labs/tracks/09-remote-services.md
+      - 10. Heap fundamentals: course/labs/tracks/10-heap-fundamentals.md
+      - 11. Advanced heap: course/labs/tracks/11-advanced-heap.md
+      - 12. Sandboxes and capstone: course/labs/tracks/12-sandbox-capstone.md
   - References:
       - GDB field guide: course/reference/gdb.md
       - pwntools field guide: course/reference/pwntools.md
