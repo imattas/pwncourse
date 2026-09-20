@@ -1,6 +1,6 @@
 site_name: PwnCourse
 site_description: Zero-to-master binary exploitation with local WSL labs
-site_url: https://your-user.github.io/pwncourse/
+site_url: https://imattas.github.io/pwncourse/
 repo_name: pwncourse
 docs_dir: mkdocs/docs
 site_dir: dist
