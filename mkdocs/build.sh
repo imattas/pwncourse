@@ -43,18 +43,18 @@ EOF
   } > "$docs_dir/lessons/$slug.md"
 }
 
-lesson 01-foundations chapters/01-foundations.md labs/tracks/01-warmup-and-elf labs/00-foundations/hello-elf
-lesson 02-debugging chapters/01-foundations.md labs/tracks/02-gdb-and-x86 labs/01-debugging/find-the-offset
-lesson 03-stack-control chapters/02-stack-overflows.md labs/tracks/03-first-stack-overflow labs/02-stack/ret2arg
-lesson 04-pwntools chapters/02-stack-overflows.md labs/tracks/04-pwntools labs/02-stack/ret2win
-lesson 05-mitigations chapters/03-mitigations-and-leaks.md labs/tracks/05-stack-protections labs/04-libc/got-leak
-lesson 06-format-strings chapters/05-format-strings.md labs/tracks/06-format-strings labs/06-format-string/fmt-read
-lesson 07-rop chapters/04-rop-and-ret2libc.md labs/tracks/07-rop labs/05-rop/rop-call
-lesson 08-ret2libc chapters/04-rop-and-ret2libc.md labs/tracks/08-ret2libc labs/04-libc/got-leak
-lesson 09-remote-services chapters/07-advanced-chains.md labs/tracks/09-remote-services labs/05-rop/rop-call
-lesson 10-heap chapters/06-heap-exploitation.md labs/tracks/10-heap-fundamentals labs/07-heap/uaf
-lesson 11-advanced-heap chapters/06-heap-exploitation.md labs/tracks/11-advanced-heap labs/07-heap/heap-leak-chain
-lesson 12-capstone chapters/07-advanced-chains.md labs/tracks/12-sandbox-capstone labs/08-advanced-linux/seccomp-rop
+lesson 01-foundations chapters/01-foundations.md labs/tracks/01-warmup-and-elf.md labs/00-foundations/hello-elf
+lesson 02-debugging chapters/01-foundations.md labs/tracks/02-gdb-and-x86.md labs/01-debugging/find-the-offset
+lesson 03-stack-control chapters/02-stack-overflows.md labs/tracks/03-first-stack-overflow.md labs/02-stack/ret2arg
+lesson 04-pwntools chapters/02-stack-overflows.md labs/tracks/04-pwntools.md labs/02-stack/ret2win
+lesson 05-mitigations chapters/03-mitigations-and-leaks.md labs/tracks/05-stack-protections.md labs/04-libc/got-leak
+lesson 06-format-strings chapters/05-format-strings.md labs/tracks/06-format-strings.md labs/06-format-string/fmt-read
+lesson 07-rop chapters/04-rop-and-ret2libc.md labs/tracks/07-rop.md labs/05-rop/rop-call
+lesson 08-ret2libc chapters/04-rop-and-ret2libc.md labs/tracks/08-ret2libc.md labs/04-libc/got-leak
+lesson 09-remote-services chapters/07-advanced-chains.md labs/tracks/09-remote-services.md labs/05-rop/rop-call
+lesson 10-heap chapters/06-heap-exploitation.md labs/tracks/10-heap-fundamentals.md labs/07-heap/uaf
+lesson 11-advanced-heap chapters/06-heap-exploitation.md labs/tracks/11-advanced-heap.md labs/07-heap/heap-leak-chain
+lesson 12-capstone chapters/07-advanced-chains.md labs/tracks/12-sandbox-capstone.md labs/08-advanced-linux/seccomp-rop
 if command -v py.exe >/dev/null 2>&1 && command -v cygpath >/dev/null 2>&1 && py.exe -c 'import mkdocs' >/dev/null 2>&1; then
   python_cmd=(py.exe)
   config_path="$(cygpath -w "$root_dir/mkdocs.yml")"
