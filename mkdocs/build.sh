@@ -21,24 +21,24 @@ lesson() {
 
 ## Downloads and localhost remote
 
-- [Download the complete course](../../downloads/course.zip)
-- [Challenge README](../../downloads/$challenge/README.md)
-- [Challenge source](../../downloads/$challenge/challenge.c)
-- [Starter exploit](../../downloads/$challenge/solve.py)
+- [Download the complete course](https://pwncourse.zemi.gg/downloads/course.zip)
+- [Challenge README](https://pwncourse.zemi.gg/downloads/$challenge/README.md)
+- [Challenge source](https://pwncourse.zemi.gg/downloads/$challenge/challenge.c)
+- [Starter exploit](https://pwncourse.zemi.gg/downloads/$challenge/solve.py)
 
 To run this challenge as a local TCP service from the downloaded course directory:
 
-```bash
+\`\`\`bash
 bash scripts/serve-lab.sh $challenge/challenge 31337
-```
+\`\`\`
 
 In a second WSL terminal, point the exploit at that localhost service:
 
-```bash
+\`\`\`bash
 PWN_REMOTE=1 PWN_HOST=127.0.0.1 PWN_PORT=31337 python3 $challenge/solve.py
-```
+\`\`\`
 
-Stop the server with `Ctrl-C` when finished. The service is intentionally bound to localhost.
+Stop the server with Ctrl-C when finished. The service is intentionally bound to localhost.
 EOF
   } > "$docs_dir/lessons/$slug.md"
 }

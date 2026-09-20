@@ -5,8 +5,15 @@ ROOT = Path(__file__).parents[1]
 
 
 def test_mkdocs_site_contract_exists():
-    for filename in ("mkdocs.yml", "mkdocs/build.sh", "mkdocs/requirements.txt", "mkdocs/docs/index.md", ".github/workflows/pages.yml"):
+    for filename in ("mkdocs.yml", "mkdocs/build.sh", "mkdocs/requirements.txt", "mkdocs/docs/index.md", ".github/workflows/pages.yml", "CNAME"):
         assert (ROOT / filename).is_file(), filename
+
+
+def test_custom_domain_and_lesson_download_contract():
+    assert (ROOT / "CNAME").read_text(encoding="utf-8").strip() == "pwncourse.zemi.gg"
+    build = (ROOT / "mkdocs/build.sh").read_text(encoding="utf-8")
+    assert "https://pwncourse.zemi.gg/downloads/" in build
+    assert "scripts/serve-lab.sh" in build
 
 
 def test_mkdocs_config_exposes_course_sections():

@@ -10,10 +10,11 @@ Learn the reasoning loop behind a reliable exploit chain: inspect the artifact, 
 ## Start the path
 
 1. Complete [WSL setup](course/SETUP-WSL.md).
-2. Read the [course map](course/COURSE.md).
-3. Work through the [lab index](course/LAB-INDEX.md).
-4. Download sources from each lab page under `downloads/labs/`.
-5. Read a writeup only after you have your own crash, leak, or chain notes.
+2. Start with [Lesson 1](course/lessons/01-foundations.md).
+3. Work through the twelve lessons in order; each page contains its lab, downloads, and localhost remote command.
+4. Read a writeup only after you have your own crash, leak, or chain notes.
+
+[Download the complete course](https://pwncourse.zemi.gg/downloads/course.zip) after the first deployment build completes.
 
 ## The core promise
 
@@ -26,4 +27,3 @@ All challenge success markers use the canonical format:
 ```text
 flag{...}
 ```
-
